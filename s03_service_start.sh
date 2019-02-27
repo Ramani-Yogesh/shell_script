@@ -3,10 +3,10 @@
 a=$(echo $?);
 if [ $a -eq 0 ]; 
 then
-	echo "Service is running already";
+	echo "Apache Service is running already";
 else 
-	echo "Service is not running, wait it will start";
-/etc/init.d/apache2 start >> /dev/null
-echo "Now service is running";
-/etc/init.d/apache2 status
+	echo "Apache Service is not running, wait it will start";
+sudo /etc/init.d/apache2 start >> /dev/null
+echo "Now Apache service is running";
+#sudo /etc/init.d/apache2 status
 fi
